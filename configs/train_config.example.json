@@ -1,0 +1,63 @@
+{
+  "model": {
+    "base": "Qwen/Qwen2.5-7B-Instruct",
+    "name": "piiguard-worryfree-v1"
+  },
+  "crypto": {
+    "kdf": "argon2id",
+    "aead": "aes-256-gcm",
+    "note": "Password+salt set at piiguard init; never stored in this file"
+  },
+  "pii_entities": [
+    { "type": "EMAIL", "action": "encrypt", "description": "Email addresses" },
+    { "type": "PHONE", "action": "encrypt", "description": "Phone numbers" },
+    { "type": "SSN", "action": "encrypt", "description": "US Social Security numbers" },
+    { "type": "CREDIT_CARD", "action": "encrypt", "description": "Payment card numbers" },
+    { "type": "IP", "action": "encrypt", "description": "IPv4 addresses" }
+  ],
+  "guardrails": {
+    "prompt_injection": "block",
+    "jailbreak": "refuse",
+    "exfiltration": "block",
+    "system_prompt_locked": true
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["answer", "citations", "pii_encrypted", "injection_blocked", "grounded", "modelmemory_used"],
+    "properties": {
+      "answer": { "type": "string" },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["source_id", "quote"],
+          "properties": {
+            "source_id": { "type": "string" },
+            "quote": { "type": "string" }
+          }
+        }
+      },
+      "pii_encrypted": { "type": "boolean" },
+      "injection_blocked": { "type": "boolean" },
+      "grounded": { "type": "boolean" },
+      "modelmemory_used": { "type": "boolean" },
+      "flags": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "additionalProperties": false
+  },
+  "grounding": {
+    "default_modelmemory": false,
+    "ungrounded_policy": "refuse",
+    "require_citations_when_content": true,
+    "ungrounded_pii_policy": "drop"
+  },
+  "parameters": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_tokens": 1024,
+    "response_format": { "type": "json_object" }
+  }
+}

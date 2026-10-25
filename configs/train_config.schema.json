@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://piiguard.local/train_config.schema.json",
+  "title": "PII Guardrails LLM train-once config",
+  "type": "object",
+  "required": ["model", "crypto", "pii_entities", "guardrails", "output_schema", "grounding"],
+  "properties": {
+    "model": {
+      "type": "object",
+      "required": ["base", "name"],
+      "properties": {
+        "base": { "type": "string", "description": "e.g. Qwen/Qwen2.5-7B-Instruct" },
+        "name": { "type": "string", "description": "Artifact name after train" }
+      }
+    },
+    "crypto": {
+      "type": "object",
+      "required": ["kdf", "aead"],
+      "properties": {
+        "kdf": { "enum": ["argon2id"] },
+        "aead": { "enum": ["aes-256-gcm"] },
+        "note": { "type": "string" }
+      }
+    },
+    "pii_entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "action"],
+        "properties": {
+          "type": { "type": "string" },
+          "action": { "enum": ["encrypt", "mask", "block"] },
+          "patterns": { "type": "array", "items": { "type": "string" } },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "guardrails": {
+      "type": "object",
+      "required": ["prompt_injection", "jailbreak", "exfiltration"],
+      "properties": {
+        "prompt_injection": { "enum": ["block", "strip", "flag"] },
+        "jailbreak": { "enum": ["block", "refuse"] },
+        "exfiltration": { "enum": ["block"] },
+        "system_prompt_locked": { "type": "boolean", "default": true }
+      }
+    },
+    "output_schema": {
+      "type": "object",
+      "description": "JSON Schema the model must always satisfy",
+      "additionalProperties": true
+    },
+    "grounding": {
+      "type": "object",
+      "required": ["default_modelmemory", "ungrounded_policy"],
+      "properties": {
+        "default_modelmemory": { "type": "boolean" },
+        "ungrounded_policy": { "enum": ["refuse", "repair", "flag"] },
+        "require_citations_when_content": { "type": "boolean", "default": true },
+        "ungrounded_pii_policy": {
+          "enum": ["drop", "refuse"],
+          "default": "drop",
+          "description": "modelmemory=false: PII the model emits that is not in content/user messages is never sealed; drop the span or refuse the whole answer"
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Default generation parameters (OpenAI-style)",
+      "properties": {
+        "temperature": { "type": "number" },
+        "top_p": { "type": "number" },
+        "max_tokens": { "type": "integer" },
+        "response_format": { "type": "object" }
+      }
+    }
+  }
+}

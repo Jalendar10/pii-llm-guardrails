@@ -1,0 +1,12 @@
+{
+  "answer": "The refund window is 30 days. Email <PII:EMAIL:...encrypted...> for support.",
+  "citations": [
+    { "source_id": "doc-1", "quote": "Refund window is 30 days." }
+  ],
+  "pii_encrypted": true,
+  "injection_blocked": false,
+  "grounded": true,
+  "modelmemory_used": false,
+  "flags": [],
+  "usage": { "prompt_tokens": 120, "completion_tokens": 40 }
+}

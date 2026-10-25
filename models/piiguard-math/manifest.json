@@ -1,0 +1,7 @@
+{
+  "name": "piiguard-math",
+  "weights": "weights.stub",
+  "weights_sha256": "b8b62069ed45df667b3f42d00b5dfd00b1bd6b9a6ea13349c7fe4b5eee332187",
+  "keyring": "keyring.json",
+  "train_config": "train_config.json"
+}

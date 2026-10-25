@@ -1,0 +1,8 @@
+# Optional: real Hugging Face backend (`--backend hf`). Stub path needs none of this.
+# CPU-only torch (box / CI):  pip install --index-url https://download.pytorch.org/whl/cpu torch
+# CUDA (RunPod) / Mac MPS:     pip install torch   (default PyPI wheel)
+torch>=2.3
+transformers>=4.51   # Qwen3 support
+accelerate
+sentencepiece
+protobuf

@@ -1,0 +1,15 @@
+{
+  "model": "piiguard-worryfree-v1",
+  "modelmemory": false,
+  "content": [
+    {
+      "id": "doc-1",
+      "text": "Support contact is jalendarreddy97@gmail.com. Refund window is 30 days."
+    }
+  ],
+  "messages": [
+    { "role": "user", "content": "What is the refund window and who do I email?" }
+  ],
+  "temperature": 0.2,
+  "max_tokens": 512
+}

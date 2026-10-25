@@ -1,0 +1,12 @@
+{
+  "salt_b64": "ZM1iwVW35yTagSzvT-9HcQ==",
+  "key_version": 1,
+  "wrapped_nonce_b64": "y8bHl7WmXrumMYrC",
+  "wrapped_ciphertext_b64": "j5gyLjnhsY9-b_v39rkk30udLYTXvZJ7GP7UG_LKJIIj1WhDPzhoj0HV979Xryzh",
+  "argon2": {
+    "m": 19456,
+    "t": 2,
+    "p": 1
+  },
+  "password_epoch": 1
+}
