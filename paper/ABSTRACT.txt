@@ -1,0 +1,6 @@
+Sealed Decoding: Encrypting PII Inside the LLM Generate Loop
+Jalendar Reddy Maligireddy (University of the Cumberlands)
+
+Language models that answer over private documents copy personal data into their output, and most deployments stream that output token by token. A filter on the finished answer runs after the client already has the data; a filter before the model removes the data for readers entitled to it. We describe Sealed Decoding, which encrypts PII inside the generate loop. A streaming hook holds back any suffix that could still grow into a PII span and replaces each completed span with AES-256-GCM ciphertext under a data key wrapped by an Argon2id-derived key. Only ciphertexts issued during the current request, and valid under the live key, may leave the server. Model-made look-alike tokens are removed, and PII absent from the supplied context is not sealed. Password rotation rewraps the data key without touching weights or stored ciphertexts. The open-source implementation passes 62 tests. On Qwen3-0.6B on CPU, an end-to-end check seals an email and an SSN during streaming, decrypts both with the right password, and fails closed with a wrong one (7/7). Leakage rate, detector recall, and utility are not yet measured; we give the evaluation plan.
+
+Code: https://github.com/Jalendar10/pii-llm-guardrails
