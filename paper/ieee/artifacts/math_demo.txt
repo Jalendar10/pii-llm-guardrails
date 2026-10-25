@@ -1,0 +1,16 @@
+pulled piiguard-math:stub -> /tmp/tmpz6vf8f7p/user_models/piiguard-math:stub
+prompt : What is 2+2?
+output : Alice's SSN is <PII:SSN:eyJ2IjoxLCJuIjoieTJiUW9RRUdUVU54U3plVyIsImMiOiJwZFNCWXhOa2lGaDhzekRjczhWbFNXVGl1Uk52Q2ZkdlhWaDQiLCJ0IjoiU1NOIn0>, email <PII:EMAIL:eyJ2IjoxLCJuIjoiTU5PRFBxMHJHOEt0bVdfMCIsImMiOiJFUkZVQkZLRzZuWWlfR1h0ZmJRMHpfYjc5bUFBZ2wzYi1YUzFJOG83bS0zOCIsInQiOiJFTUFJTCJ9>, and 2+2=4.
+[PASS] math intact in encrypted output
+[PASS] encrypt (no plaintext PII, tokens present)
+decrypt: Alice's SSN is 123-45-6789, email alice@example.com, and 2+2=4.
+[PASS] decrypt with correct password (0 data loss)
+[PASS] wrong password fails closed
+rotated password -> password_epoch=2
+[PASS] rotate: weights unchanged
+[PASS] rotate: wrong old password rejected
+[PASS] post-rotate: OLD ciphertext decrypts with NEW password
+[PASS] post-rotate: old password fails closed
+[PASS] post-rotate: new generation works (7*6=42)
+
+SUMMARY: 9/9 PASS

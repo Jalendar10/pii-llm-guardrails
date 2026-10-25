@@ -73,7 +73,7 @@ Functional checks only. No leakage-rate, recall, or utility benchmark has been r
 | `pytest` suite | 62 passed, 1 skipped (opt-in HF test) |
 | Encrypt-and-rotate demo | 9/9 |
 | Qwen3-0.6B, CPU, bf16, end to end | 7/7: email and SSN sealed during streaming; no plaintext PII in answer or citations; decrypt roundtrip; wrong password raises `InvalidTag` |
-| Qwen3-0.6B cost (8 vCPU, no GPU) | load about 3.3 s; generate + seal 1.3 to 1.6 s for a 129-token prompt; peak RSS about 2.0 GB |
+| Qwen3-0.6B cost (8 vCPU, no GPU) | load about 3.3 s; generate + seal 1.2 to 1.6 s across runs for a 129-token prompt; peak RSS about 2.0 GB |
 | Qwen3-8B | Not yet run. Needs a 24 GB+ GPU or 32 GB Apple Silicon |
 
 ## Intended use

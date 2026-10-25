@@ -1,0 +1,43 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 12993.22it/s]
+loaded Qwen/Qwen3-0.6B on cpu/bfloat16 in 3.2s
+
+=== sealed API response (what any caller sees) ===
+{
+  "model": "qwen-sealed",
+  "answer": "email: <PII:EMAIL:eyJ2IjoxLCJuIjoiOUxXSThGMXkwU3FLVlIzZyIsImMiOiJHUWRIajJiQjFnS0xGd0Qwc3VtT2o1N2w3U1JYMGFiREdrU2J6aGREYXlBUyIsInQiOiJFTUFJTCJ9>  \nSSN: <PII:SSN:eyJ2IjoxLCJuIjoiZ0VkUzNXLVk1VDU2aElMUCIsImMiOiJNd1RXTGJSc3dmaU84TkllazE3cV9uX2ZEcEE4YnJxVDdYMU4iLCJ0IjoiU1NOIn0>",
+  "citations": [
+    {
+      "source_id": "note-1",
+      "quote": "Her SSN is <PII:SSN:eyJ2IjoxLCJuIjoibFoydi10WktsRUpIMFdOcSIsImMiOiJCZWF6RXhCR1o4NVFvazZWZ0FHUjdQTTlTNXA0NzVTeUUyWG0iLCJ0IjoiU1NOIn0>."
+    }
+  ],
+  "pii_encrypted": true,
+  "injection_blocked": false,
+  "grounded": true,
+  "modelmemory_used": false,
+  "flags": [],
+  "stream_chunks": 4,
+  "backend": {
+    "type": "hf",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "prompt_tokens": 129,
+    "stream_chunks": 23
+  }
+}
+[PASS] no plaintext email in sealed answer
+[PASS] no plaintext SSN in sealed answer
+[PASS] assert_no_plaintext_pii(answer)
+[PASS] no plaintext PII in citations
+[PASS] not refused / not injection-blocked — flags=[]
+
+=== decrypted by password holder ===
+email: alice@example.com  
+SSN: 123-45-6789
+[PASS] decrypt roundtrip (password holder) — 2 token(s) opened
+[PASS] wrong password fails closed — InvalidTag
+[INFO] model returned email: True, SSN: True, sealed tokens: 2
+[INFO] load 3.2s, generate+seal 1.2s, model chunks 23, prompt tokens 129, peak RSS 1967 MB
+
+ALL PASS (7/7)

@@ -1,0 +1,90 @@
+{
+  "env": {
+    "python": "3.13.5",
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+    "cpu": "Intel(R) Xeon(R) Processor",
+    "vcpus": 8,
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "cryptography": "50.0.2",
+    "argon2_cffi": "25.1.0",
+    "date": "2026-10-25 18:31 EDT"
+  },
+  "crypto": {
+    "argon2id_unlock": {
+      "median_ms": 18.329,
+      "min_ms": 17.952,
+      "max_ms": 23.803,
+      "n": 20
+    },
+    "seal_ssn_span": {
+      "median_ms": 0.022,
+      "min_ms": 0.021,
+      "max_ms": 0.16,
+      "n": 200
+    },
+    "open_ssn_span": {
+      "median_ms": 0.005,
+      "min_ms": 0.005,
+      "max_ms": 0.04,
+      "n": 200
+    },
+    "detect_note_160chars": {
+      "median_ms": 0.016,
+      "min_ms": 0.015,
+      "max_ms": 0.03,
+      "n": 200
+    },
+    "sealed_ssn_token_len": 121,
+    "sealed_email_token_len": 147
+  },
+  "cli": {
+    "stub_cli_run_wall": {
+      "median_ms": 83.725,
+      "min_ms": 76.2,
+      "max_ms": 84.328,
+      "n": 5
+    },
+    "stub_cli_child_peak_rss_mb": 270,
+    "stub_cli_stdout": "{\"model\": \"demo\", \"answer\": \"Alice's SSN is <PII:SSN:eyJ2IjoxLCJuIjoiRkNCV1NKaFRhNmRjOWJ6cyIsImMiOiJzNUc2RG1ybUpUMHhJYXdxSzg5dS1sOWM3Tk5NcVo0bjNUeVgiLCJ0IjoiU1NOIn0>, email <PII:EMAIL:eyJ2IjoxLCJuIjoiYVczdGd5UzVDR2pibmpsViIsImMiOiJsRjdab0dzaVJJQlRlUFBnZmFRS2I3UnhnSk1HMWFIVjJlUEtWZk40eTlxSiIsInQiOiJFTUFJTCJ9>, and 2+2=4.\", \"citations\": [], \"pii_encrypted\": true, \"injection_blocked\": false, \"grounded\": false, \"modelmemory_used\": true, \"flags\": [], \"stream_chunks\": 15}"
+  },
+  "generation": {
+    "model_id": "Qwen/Qwen3-0.6B",
+    "load_s": 1.59,
+    "runs": 5,
+    "max_new_tokens": 96,
+    "prompt_tokens": 161,
+    "stream_chunks": 44,
+    "raw_stream_total": {
+      "median_ms": 1989.845,
+      "min_ms": 1953.598,
+      "max_ms": 2126.574,
+      "n": 5
+    },
+    "sealed_stream_total": {
+      "median_ms": 1910.863,
+      "min_ms": 1892.279,
+      "max_ms": 2421.41,
+      "n": 5
+    },
+    "sealer_hook_cpu": {
+      "median_ms": 2.485,
+      "min_ms": 2.164,
+      "max_ms": 2.88,
+      "n": 5
+    },
+    "ttfb_raw": {
+      "median_ms": 209.936,
+      "min_ms": 187.584,
+      "max_ms": 237.046,
+      "n": 5
+    },
+    "ttfb_sealed": {
+      "median_ms": 208.888,
+      "min_ms": 194.236,
+      "max_ms": 284.767,
+      "n": 5
+    },
+    "peak_rss_mb": 2108
+  }
+}

@@ -3,7 +3,10 @@
 **Sealed Decoding: Encrypting PII Inside the LLM Generate Loop**
 Jalendar Reddy Maligireddy, University of the Cumberlands (ORCID 0009-0002-5881-0084)
 
-Compiled PDF: [`../sealed_decoding.pdf`](../sealed_decoding.pdf) (copy: [`sealed_decoding.pdf`](sealed_decoding.pdf)).
+> **Superseded.** The canonical, IEEE-formatted version (IEEEtran conference, 9 pages, 5 figures,
+> user I/O examples and measured costs) is in [`../ieee/`](../ieee/) and is what
+> [`../sealed_decoding.pdf`](../sealed_decoding.pdf) now contains. This folder keeps the earlier
+> single-column `article` version (11 pages) for reference; its PDF is [`sealed_decoding.pdf`](sealed_decoding.pdf).
 The Markdown version of the same paper is [`../PAPER.md`](../PAPER.md).
 
 ## Files
@@ -28,7 +31,7 @@ cd paper/latex
 latexmk -pdf main.tex
 # or, by hand:
 pdflatex main && bibtex main && pdflatex main && pdflatex main
-cp main.pdf sealed_decoding.pdf && cp main.pdf ../sealed_decoding.pdf
+cp main.pdf sealed_decoding.pdf   # do not overwrite ../sealed_decoding.pdf (that is the IEEE build)
 ```
 
 `latexmk -C` removes build files.
