@@ -1,0 +1,93 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Asthana et~al.(2025)Asthana, Zhang, Mahindru, DeLuca, Gentile, and
+  Gopisetty]{asthana2025deploying}
+Shubhi Asthana, Bing Zhang, Ruchi Mahindru, Chad DeLuca, Anna~Lisa Gentile, and
+  Sandeep Gopisetty.
+\newblock Deploying privacy guardrails for {LLMs}: A comparative analysis of
+  real-world applications.
+\newblock arXiv:2501.12456, 2025.
+\newblock URL \url{https://arxiv.org/abs/2501.12456}.
+
+\bibitem[Biryukov et~al.(2021)Biryukov, Dinu, Khovratovich, and
+  Josefsson]{rfc9106}
+Alex Biryukov, Daniel Dinu, Dmitry Khovratovich, and Simon Josefsson.
+\newblock {Argon2} memory-hard function for password hashing and proof-of-work
+  applications.
+\newblock RFC 9106, Internet Engineering Task Force, 2021.
+\newblock URL \url{https://www.rfc-editor.org/rfc/rfc9106.html}.
+
+\bibitem[Carlini et~al.(2021)Carlini, Tram{\`e}r, Wallace, Jagielski,
+  Herbert-Voss, Lee, Roberts, Brown, Song, Erlingsson, Oprea, and
+  Raffel]{carlini2021extracting}
+Nicholas Carlini, Florian Tram{\`e}r, Eric Wallace, Matthew Jagielski, Ariel
+  Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, {\'U}lfar
+  Erlingsson, Alina Oprea, and Colin Raffel.
+\newblock Extracting training data from large language models.
+\newblock In \emph{30th USENIX Security Symposium}, 2021.
+\newblock URL \url{https://arxiv.org/abs/2012.07805}.
+
+\bibitem[{Data Privacy Stack}(n.d.)]{presidio}
+{Data Privacy Stack}.
+\newblock {Presidio}: An open-source framework for detecting, redacting,
+  masking, and anonymizing sensitive data.
+\newblock GitHub repository, n.d.
+\newblock URL \url{https://github.com/data-privacy-stack/presidio}.
+
+\bibitem[Dworkin(2007)]{nist80038d}
+Morris Dworkin.
+\newblock Recommendation for block cipher modes of operation:
+  {G}alois/{C}ounter {M}ode ({GCM}) and {GMAC}.
+\newblock NIST Special Publication 800-38D, National Institute of Standards and
+  Technology, 2007.
+\newblock URL \url{https://csrc.nist.gov/pubs/sp/800/38/d/final}.
+
+\bibitem[Lukas et~al.(2023)Lukas, Salem, Sim, Tople, Wutschitz, and
+  Zanella-B{\'e}guelin]{lukas2023analyzing}
+Nils Lukas, Ahmed Salem, Robert Sim, Shruti Tople, Lukas Wutschitz, and
+  Santiago Zanella-B{\'e}guelin.
+\newblock Analyzing leakage of personally identifiable information in language
+  models.
+\newblock In \emph{IEEE Symposium on Security and Privacy (S\&P)}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2302.00539}.
+
+\bibitem[{Private AI}(n.d.)]{privategpt}
+{Private AI}.
+\newblock {PrivateGPT Headless}.
+\newblock Product page, \url{https://private-ai.com/en/products/pgpt-api/},
+  n.d.
+\newblock As of October 2026 this URL redirects to a 404 on getlimina.ai;
+  successor documentation for de-identify and re-identify around LLM calls:
+  \url{https://docs.getlimina.ai/configuration-and-operations/advanced-features/llms}.
+
+\bibitem[Ram(2025)]{ram2025constrained}
+A.~A. Ram.
+\newblock Constrained decoding for privacy-preserving {LLM} inference.
+\newblock In \emph{ResponsibleFM Workshop at NeurIPS 2025}, 2025.
+\newblock URL \url{https://openreview.net/pdf?id=riu8VN6Do8}.
+
+\bibitem[Rebedea et~al.(2023)Rebedea, Dinu, Sreedhar, Parisien, and
+  Cohen]{rebedea2023nemo}
+Traian Rebedea, Razvan Dinu, Makesh Sreedhar, Christopher Parisien, and
+  Jonathan Cohen.
+\newblock {NeMo Guardrails}: A toolkit for controllable and safe {LLM}
+  applications with programmable rails.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing: System Demonstrations}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.10501}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2017.
+\newblock URL \url{https://arxiv.org/abs/1706.03762}.
+
+\end{thebibliography}

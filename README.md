@@ -10,6 +10,8 @@
 
 | File | What it is |
 |---|---|
+| [`paper/sealed_decoding.pdf`](paper/sealed_decoding.pdf) | **Compiled paper (PDF, 11 pages)** |
+| [`paper/latex/`](paper/latex/) | LaTeX source (`main.tex`, `references.bib`, figure) with compile and arXiv notes |
 | [`paper/PAPER.md`](paper/PAPER.md) | Full paper: method, threat model, validation, limitations, references |
 | [`paper/ABSTRACT.txt`](paper/ABSTRACT.txt) | Abstract (under 200 words) |
 | [`paper/MODEL_CARD.md`](paper/MODEL_CARD.md) | Hugging Face model card for the sealed serve path |

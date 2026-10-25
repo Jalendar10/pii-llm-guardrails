@@ -5,6 +5,7 @@ University of the Cumberlands
 ORCID: [0009-0002-5881-0084](https://orcid.org/0009-0002-5881-0084)
 
 Code: https://github.com/Jalendar10/pii-llm-guardrails
+PDF: [sealed_decoding.pdf](sealed_decoding.pdf) · LaTeX source: [latex/](latex/)
 Status: preprint draft, October 2026. Suggested arXiv categories: cs.CR (primary), cs.CL.
 
 ---
