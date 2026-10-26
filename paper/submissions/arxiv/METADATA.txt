@@ -1,0 +1,44 @@
+arXiv submission metadata: Sealed Decoding
+===========================================
+
+Title:
+Sealed Decoding: Encrypting PII Inside the LLM Generate Loop
+
+Authors:
+Jalendar Reddy Maligireddy
+
+Author details (for the arXiv profile, not a metadata field):
+  Affiliation: University of the Cumberlands, Williamsburg, KY, USA
+  ORCID:       0009-0002-5881-0084   (link it at https://arxiv.org/user/ before submitting)
+  Email:       jalendarreddy97@gmail.com
+
+Abstract (paste as one paragraph; from paper/ABSTRACT.txt, under arXiv's 1,920-char limit):
+Language models that answer over private documents copy personal data into their output, and most deployments stream that output token by token. A filter on the finished answer runs after the client already has the data; a filter before the model removes the data for readers entitled to it. We describe Sealed Decoding, which encrypts PII inside the generate loop. A streaming hook holds back any suffix that could still grow into a PII span and replaces each completed span with AES-256-GCM ciphertext under a data key wrapped by an Argon2id-derived key. Only ciphertexts issued during the current request, and valid under the live key, may leave the server. Model-made look-alike tokens are removed, and PII absent from the supplied context is not sealed. Password rotation rewraps the data key without touching weights or stored ciphertexts. The open-source implementation passes 62 tests. On Qwen3-0.6B on CPU, an end-to-end check seals an email and an SSN during streaming, decrypts both with the right password, and fails closed with a wrong one (7/7). Leakage rate, detector recall, and utility are not yet measured; we give the evaluation plan.
+
+Comments:
+9 pages, 7 figures, 9 tables; IEEE conference-format draft. Code and artifacts: https://github.com/Jalendar10/pii-llm-guardrails . The LLM (Qwen3-0.6B) is studied as the untrusted object of the system; all PII is synthetic.
+
+Primary category:   cs.CR (Cryptography and Security)
+Cross-list:         cs.CL (Computation and Language)
+
+License (suggestion):
+  arXiv.org perpetual, non-exclusive license 1.0 (default; keeps the most freedom
+  for a later IEEE copyright transfer).
+  If an open license is requested: CC BY 4.0 (also compatible with IEEE, which
+  accepts prior arXiv postings under CC BY).
+
+Report number / Journal-ref / DOI: leave blank.
+MSC / ACM classes: optional. ACM: D.4.6; K.4.1; I.2.7
+
+Upload:
+  File:    sealed_decoding_arxiv.tar.gz  (source only: main.tex, main.bbl,
+           references.bib, figures/*.pdf, generated/*)
+  Compiler: pdfLaTeX (\pdfoutput=1 is set on line 1). arXiv does not run BibTeX;
+           main.bbl is included and was produced by bibtex with IEEEtran.bst.
+  Verified: unpacked to a fresh temp dir, latexmk -pdf -> 9 pages, no undefined
+           references, no overfull boxes.
+
+Note on the venue queue: arXiv posting is allowed by IEEE S&P 2027 (preprints
+are not prior publication), but the S&P submission must stay anonymous: do not
+link the arXiv ID or the GitHub repository from the S&P PDF, and do not
+advertise the preprint as "under submission at S&P".

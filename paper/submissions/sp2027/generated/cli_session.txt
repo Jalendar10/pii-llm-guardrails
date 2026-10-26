@@ -1,0 +1,17 @@
+$ python -m piiguard --models-dir $M model init clinic --password clinic-demo-pass-1
+$ python -m piiguard --models-dir $M run clinic "Write a short follow-up reminder for the care team. Include th↩
+e patient's contact email and SSN." \
+    --password clinic-demo-pass-1 \
+    --content "Discharge note (synthetic): patient Maria Lopez was seen on 2026-10-02. Contact email maria.lope↩
+z@example.org. SSN 219-09-9999. Follow-up in 14 days for wound check." \
+    --backend hf --model-id Qwen/Qwen3-0.6B --max-new-tokens 96
+{"answer": "Follow-up reminder: Maria Lopez, contact email <PII:EMAIL:eyJ2IjoxLCJuIjoicWJ4OFBHUTN4Yl8zb0E3NiIsI↩
+mMiOiI4RlhGOUtXVWVQdjV3VDNERDRDdGhHZ1lnTmZCZERrNHp5WXFuMkphdTBPbkd2X2lhWVQ1IiwidCI6IkVNQUlMIn0>, SSN <PII:SSN:e↩
+yJ2IjoxLCJuIjoidHBMNWstc0QwQ3FTT1lCQSIsImMiOiJXUmN3cXhyNlVIQnlZbUwxVERJVzZleE0ybURDME9Fdy1fWkYiLCJ0IjoiU1NOIn0>↩
+, follow-up in 14 days for wound check.", ...}
+$ python -m piiguard --models-dir $M decrypt clinic "$ANSWER" --password clinic-demo-pass-1
+Follow-up reminder: Maria Lopez, contact email maria.lopez@example.org, SSN 219-09-9999, follow-up in 14 days f↩
+or wound check.
+$ python -m piiguard --models-dir $M decrypt clinic "$ANSWER" --password wrong-password-x; echo "exit=$?"
+ERROR (fail closed): InvalidTag
+exit=2

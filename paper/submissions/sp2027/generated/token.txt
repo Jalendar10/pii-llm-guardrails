@@ -1,0 +1,10 @@
+<PII:SSN:eyJ2IjoxLCJuIjoidHBMNWstc0QwQ3FTT1lCQSIsImMiOi↩
+JXUmN3cXhyNlVIQnlZbUwxVERJVzZleE0ybURDME9Fdy1fWkYiLCJ0I↩
+joiU1NOIn0>
+
+base64url-decoded blob:
+{"v":1,"n":"tpL5k-sD0CqSOYBA","c":"WRcwqxr6UHByYmL1TDIW↩
+6exM2mDC0OEw-_ZF","t":"SSN"}
+
+token length: 121 chars (value 219-09-9999, 11 chars)
+AAD = tenant | SSN | key_version
