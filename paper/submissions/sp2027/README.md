@@ -5,7 +5,7 @@
 (10 pages: body pp. 1–9, references p. 9, Appendix A Ethics + Appendix B GenAI pp. 9–10)
 
 CFP: https://www.sp2027.ieee-security.org/cfpapers.html
-Cycle 2 HotCRP: **TBA** (Cycle 1 was https://cycle1.sp2027.ieee-security.org/; expect `cycle2.sp2027.ieee-security.org`)
+Cycle 2 HotCRP: https://cycle2.sp2027.ieee-security.org/ (live; submissions were closed as of Oct 26, 2026 — CFP may still say TBA)
 
 ## Deadlines (all AoE = UTC-12, i.e. 7:59:59 AM EST the next day in New York)
 
