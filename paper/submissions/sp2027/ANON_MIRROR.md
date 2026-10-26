@@ -1,10 +1,9 @@
 # Anonymized artifact mirror (IEEE S&P 2027, double-blind)
 
-Status (Oct 25, 2026): **scrubbed tree pushed to a private GitHub repo; Anonymous
-GitHub hosting in progress.** Source repo:
-`https://github.com/Jalendar10/llm-stream-seal-artifact` (private). Anonymous GitHub
-still needs a browser GitHub sign-in. Finish hosting before the Nov 17, 2026 AoE paper
-deadline.
+Status (Oct 25, 2026): **hosted on Anonymous GitHub.** Private source:
+`https://github.com/Jalendar10/llm-stream-seal-artifact`. The anonymous reviewer URL
+is kept only in the local submission PDF / HotCRP fields (not recorded in this public
+file). Available until Apr 25, 2027 (Remove when expired).
 
 ## What was built
 

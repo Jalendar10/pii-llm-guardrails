@@ -36,7 +36,7 @@ Rejected papers must wait one year before resubmitting to S&P.
 - [x] "Released under Apache-2.0" reworded to future tense + anonymized mirror
 - [x] No self-citations (the paper cites no prior work by the author). If one is added, cite in third person.
 - [x] `pdftotext` grep for name, university, ORCID, `Jalendar10`, email: no hits
-- [ ] **Before Nov 17:** make an anonymized artifact mirror (Anonymous GitHub, https://anonymous.4open.science, or GitFront) and, if wanted, put its URL in place of `[Anonymized repository]`. The repo currently identifies the author in: `README.md`, `configs/api_request.example.json`, `python/piiguard/generate.py`, `python/tests/test_{math_rotate_model,generation_encrypt,anti_hallucination}.py`, `paper/ieee/artifacts/pytest_v.txt` (home path `jalendarreddy97`), `paper/*.md`, `paper/ABSTRACT.txt`, `paper/latex/`, `paper/ieee/`. Exclude or scrub these in the mirror, and do not include git history.
+- [x] **Anonymized artifact mirror hosted** on Anonymous GitHub (private source `llm-stream-seal-artifact`; URL only in local `main.tex` / PDF / HotCRP — not committed here). Rebuild PDF after editing `main.tex`.
 - [ ] Do not mention the arXiv preprint or the public repo in the S&P PDF or HotCRP fields. Posting to arXiv is allowed by the CFP; avoid widely advertising it during review.
 
 ## HotCRP registration (by Nov 10)

@@ -11,12 +11,13 @@ submission and may stay up throughout.
 | # | Venue | Package | Deadline | Status |
 |---|---|---|---|---|
 | 0 | arXiv (cs.CR, cross-list cs.CL) | `arxiv/` | any time | **blocked:** pending endorsement for cs.CR (endorsement code HXYQ3N; email to jmaligireddy48581@ucumberlands.edu) |
-| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | package ready; scrubbed mirror on private `llm-stream-seal-artifact`; Anonymous GitHub hosting in progress (see `sp2027/ANON_MIRROR.md`); Cycle 2 HotCRP still TBA |
+| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | package ready; anonymized artifact hosted on Anonymous GitHub (see local `sp2027` PDF / HotCRP fields; URL not recorded here); Cycle 2 HotCRP still TBA |
 
 S&P Cycle 2 timeline: early reject Jan 18, 2027; final decision Mar 5, 2027.
 
 **Next action:** submit to S&P Cycle 2 (register abstract, then upload PDF) as soon as the
-Cycle 2 HotCRP opens. Host the anonymized artifact first (`sp2027/ANON_MIRROR.md`).
+Cycle 2 HotCRP opens. Anonymized artifact is already hosted; put the anonymous URL only
+in the submission PDF and HotCRP fields, never in this public repo.
 
 _Status updated Oct 25, 2026._
 
