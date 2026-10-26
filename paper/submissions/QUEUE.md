@@ -10,10 +10,15 @@ submission and may stay up throughout.
 
 | # | Venue | Package | Deadline | Status |
 |---|---|---|---|---|
-| 0 | arXiv (cs.CR, cross-list cs.CL) | `arxiv/` | any time | ready to upload |
-| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | ready; HotCRP TBA |
+| 0 | arXiv (cs.CR, cross-list cs.CL) | `arxiv/` | any time | **blocked:** pending endorsement for cs.CR (endorsement code HXYQ3N; email to jmaligireddy48581@ucumberlands.edu) |
+| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | package ready; anonymized artifact mirror prepared (see `sp2027/ANON_MIRROR.md`), not yet hosted; Cycle 2 HotCRP still TBA |
 
 S&P Cycle 2 timeline: early reject Jan 18, 2027; final decision Mar 5, 2027.
+
+**Next action:** submit to S&P Cycle 2 (register abstract, then upload PDF) as soon as the
+Cycle 2 HotCRP opens. Host the anonymized artifact first (`sp2027/ANON_MIRROR.md`).
+
+_Status updated Oct 25, 2026._
 
 ## Next, only after the S&P decision
 
