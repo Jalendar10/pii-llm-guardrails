@@ -1,9 +1,10 @@
 # Anonymized artifact mirror (IEEE S&P 2027, double-blind)
 
-Status (Oct 25, 2026): **prepared locally, not uploaded.** Anonymous GitHub has no
-non-interactive CLI or upload API; it needs a GitHub sign-in in a browser and a source
-GitHub repository. Hosting is a manual step for when you are ready (before the
-Nov 17, 2026 AoE paper deadline).
+Status (Oct 25, 2026): **scrubbed tree pushed to a private GitHub repo; Anonymous
+GitHub hosting in progress.** Source repo:
+`https://github.com/Jalendar10/llm-stream-seal-artifact` (private). Anonymous GitHub
+still needs a browser GitHub sign-in. Finish hosting before the Nov 17, 2026 AoE paper
+deadline.
 
 ## What was built
 
@@ -44,18 +45,13 @@ not advertise the public repo or the arXiv preprint during review.
 
 Anonymous GitHub proxies an existing GitHub repository; it does not take zip uploads.
 
-1. Create a new **private** GitHub repository with a neutral name (for example
-   `sealed-decoding-artifact`). Do not use this repository or its history.
-2. Push the scrubbed tree:
-   ```bash
-   cd /workspace/pii-llm-guardrails-anon
-   git remote add origin https://github.com/<account>/sealed-decoding-artifact.git
-   git push -u origin main
-   ```
-   The commit is already by `Anonymous Author <anonymous@example.com>`; do not amend it
-   with your own identity.
+1. ~~Create a new **private** GitHub repository~~ — done:
+   `Jalendar10/llm-stream-seal-artifact` (private). Do not use the public
+   `pii-llm-guardrails` repository or its history.
+2. ~~Push the scrubbed tree~~ — done (`Anonymous Author <anonymous@example.com>`,
+   single commit on `main`). Do not amend that commit with your own identity.
 3. Open https://anonymous.4open.science/, sign in with GitHub, choose **Anonymize**, and
-   pick the new repository and branch `main`.
+   pick `llm-stream-seal-artifact` / branch `main`.
 4. Terms to replace (one per line): your full name and each part of it, your GitHub
    account name, your university's name, your ORCID, your email addresses, and the public
    repository name. Anonymous GitHub replaces each with `XXXX` in file contents, file
