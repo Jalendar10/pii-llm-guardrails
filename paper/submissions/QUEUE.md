@@ -11,13 +11,13 @@ submission and may stay up throughout.
 | # | Venue | Package | Deadline | Status |
 |---|---|---|---|---|
 | 0 | arXiv (cs.CR, cross-list cs.CL) | `arxiv/` | any time | **blocked:** pending endorsement for cs.CR (endorsement code HXYQ3N; email to jmaligireddy48581@ucumberlands.edu) |
-| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | package ready; anonymized artifact hosted; Cycle 2 HotCRP live at https://cycle2.sp2027.ieee-security.org/ (submissions currently closed) |
+| 1 | IEEE S&P 2027, Cycle 2 | `sp2027/` | abstract Nov 10, 2026; paper Nov 17, 2026 (AoE) | package ready; anonymized artifact hosted; Cycle 2 HotCRP OPEN at https://cycle2.sp2027.ieee-security.org/ — register abstract by Nov 10 AoE |
 
 S&P Cycle 2 timeline: early reject Jan 18, 2027; final decision Mar 5, 2027.
 
-**Next action:** create a HotCRP account on Cycle 2 now; register the abstract when
-submissions open (by Nov 10, 2026 AoE), then upload the PDF by Nov 17. Put the anonymous
-URL only in the submission PDF and HotCRP fields, never in this public repo.
+**Next action:** register the abstract on Cycle 2 HotCRP now (by Nov 10, 2026 AoE),
+then upload the PDF by Nov 17. Put the anonymous URL only in the submission PDF and
+HotCRP fields, never in this public repo.
 
 _Status updated Oct 25, 2026._
 
